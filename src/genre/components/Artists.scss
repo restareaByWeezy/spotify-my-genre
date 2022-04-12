@@ -1,0 +1,23 @@
+.artists {
+  width: 700px;
+  height: 100vh;
+  background-color: #1db954;
+  margin-top: 20px;
+  box-sizing: border-box;
+  border-radius: 10%;
+
+  .artists-title {
+    font-size: 1.3em;
+    padding: 10px;
+  }
+
+  .artists-list-item {
+    margin: 15px;
+    text-align: left;
+  }
+  .artists-list-item-img {
+    float: left;
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+}

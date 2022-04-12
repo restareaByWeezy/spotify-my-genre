@@ -1,15 +1,11 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import Header from "./@shared/Header";
-import Artists from "./artists/Artists";
+import Genre from "./genre/pages/Genre";
 
 function App() {
   return (
     <div className='global'>
-      <div className='container'>
-        <Header></Header>
-        <Artists></Artists>
-      </div>
+      <Genre></Genre>
     </div>
   );
 }
