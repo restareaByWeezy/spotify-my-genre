@@ -3,6 +3,7 @@ import Header from "../../@shared/components/Header";
 import Artists from "../components/Artists";
 import MyGenre from "../components/MyGenre";
 import axios from "axios";
+import { artistData } from "../../data/data";
 
 const Genre = () => {
   const [token, setToken] = useState("");
@@ -41,8 +42,8 @@ const Genre = () => {
   return (
     <div className='container'>
       <Header token={token} setToken={setToken}></Header>
-      <MyGenre following={following}></MyGenre>
-      <Artists following={following}></Artists>
+      <MyGenre following={artistData}></MyGenre>
+      <Artists following={artistData}></Artists>
     </div>
   );
 };

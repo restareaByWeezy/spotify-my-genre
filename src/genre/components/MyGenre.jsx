@@ -9,7 +9,6 @@ const MyGenre = props => {
     const map = new Map();
     for (let i = 0; i < 50; i++) {
       const genre = props.following.artists.items[i].genres;
-      console.log(genre);
       for (let j = 0; j < genre.length; j++) {
         const number = map.get(genre[j]);
         if (map.has(genre[j])) {
@@ -31,11 +30,12 @@ const MyGenre = props => {
     setMostValue(tempValue);
     setGenreMap(map);
   }, []);
-  console.log(genreMap?.get(mostKey));
 
   return (
     <div className='my-genre-container'>
-      <span>My Genre is</span>
+      <span>
+        My Genre is <span className='mostKey'>{mostKey}</span>
+      </span>
       {/* <span className='my-genre-genre'>{mostKey}</span> */}
     </div>
   );

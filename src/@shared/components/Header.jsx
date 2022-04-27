@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.scss";
+import { FaSpotify } from "react-icons/fa";
 
 const Header = props => {
   const CLIENT_ID = "7b8f9dd7a2464d00a19ec6bb32f3df3f";
@@ -16,7 +17,9 @@ const Header = props => {
   return (
     <div>
       <header className='App-header'>
-        <h1 className='title'>What's my genre</h1>
+        <h1 className='title'>
+          <FaSpotify className='FaSpotify' /> What's my genre
+        </h1>
         {!props.token ? (
           <a
             className='button'
