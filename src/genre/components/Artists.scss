@@ -25,9 +25,34 @@
   .artist {
     display: flex;
     flex-direction: row;
-    background-color: blue;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 15px 0 100px;
+    width: 700px;
+    box-sizing: border-box;
+    margin: 15px;
+
+    .artist-img {
+      width: 120px;
+    }
+
     .artist-detail {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      width: 300px;
+
+      .artist-name {
+        margin-bottom: 5px;
+        color: #ffd365;
+        font-size: 25px;
+      }
+      .artist-genres {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
   }
 }
