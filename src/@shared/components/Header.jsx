@@ -28,9 +28,9 @@ const Header = props => {
             Login to Spotify
           </a>
         ) : (
-          <button className='button' onClick={logout}>
+          <a className='button' href='http://localhost:3000' onClick={logout}>
             Logout
-          </button>
+          </a>
         )}
       </header>
     </div>

@@ -1,22 +1,22 @@
 import React from "react";
-import "./Header.scss";
 import { FaSpotify } from "react-icons/fa";
+import "./Login.scss";
 
-const Header = props => {
-  const CLIENT_ID = "7b8f9dd7a2464d00a19ec6bb32f3df3f";
-  const REDIRECT_URI = "http://localhost:3000/callback";
-  const RESPONSE_TYPE = "token";
-  const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
-  const SCOPE = "user-follow-read";
+const CLIENT_ID = "7b8f9dd7a2464d00a19ec6bb32f3df3f";
+const REDIRECT_URI = "http://localhost:3000/genre";
+const RESPONSE_TYPE = "token";
+const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
+const SCOPE = "user-follow-read";
 
+const Login = props => {
   const logout = () => {
     props.setToken("");
     window.localStorage.removeItem("token");
   };
 
   return (
-    <div>
-      <header className='App-header'>
+    <div className='App-container'>
+      <div className='App-header'>
         <h1 className='title'>
           <FaSpotify className='FaSpotify' /> What's my genre
         </h1>
@@ -32,9 +32,9 @@ const Header = props => {
             Logout
           </button>
         )}
-      </header>
+      </div>
     </div>
   );
 };
 
-export default Header;
+export default Login;
